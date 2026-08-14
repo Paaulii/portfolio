@@ -59,11 +59,11 @@ body {
 
 /* Project cards */
 .card {
-  padding: 1rem;
   color: #ffffff;
   border-radius: 10px;
-  transition: 0.4s ease-in-out;
   cursor: pointer;
+  overflow: hidden;
+  position: relative;
 }
 
 .card a {
@@ -71,19 +71,27 @@ body {
   transition: 0.25s ease-in-out;
   font-size: 1.1rem;
   margin-right: 0.3rem;
-
 }
 
 .card a:hover {
   color: var(--primary-color);
 }
 
-.card:hover {
-  box-shadow: inset 0 100px 1000px 10px rgba(0, 0, 0, 0.8);
+.card img {
+  position: absolute;
+  top:0;
+  left:0;
+  height: 100%;
+  width: 100%;
+  filter: brightness(0.75);
+  object-fit: cover;
+  transition: all 0.5s;
+  z-index: -1;
 }
 
-.card:hover .project-info {
-  opacity: 1;
+.card:hover img {
+  filter: brightness(1);
+  transform: scale(1.1);
 }
 
 .card .project-bio p {
@@ -92,6 +100,10 @@ body {
 
 .card .project-bio h3 {
   font-size: 0.9rem;
+}
+
+.card:hover .project-info {
+  opacity: 1;
 }
 
 .project-info {
@@ -111,6 +123,11 @@ body {
   position: relative;
   top: 160px;
   left: 10px;
+  text-shadow: 1px 1px 2px black, 0 0 2em black, 0 0 0.5em black;
+  backdrop-filter: blur(5px);
+  width: 100%;
+  height:fit-content;
+  margin-right: 0.5em;
 }
 
 /* Responsiveness */
