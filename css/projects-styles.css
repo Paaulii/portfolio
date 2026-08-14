@@ -1,0 +1,143 @@
+/* Reset default styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Main styling */
+body {
+  background: var(--bg-primary);
+  color: var(--text-color);
+  line-height: 1.5;
+}
+
+.content-text {
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.content-text h2 {
+  font-size: 3rem;
+  line-height: 1.2;
+  transition: 0.2s ease-in-out;
+}
+
+.content-text p {
+  padding: 0.5rem;
+  margin: 0 auto;
+  max-width: 700px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+
+  .content-text h2 {
+    font-size: 2.5rem;
+  }
+}
+
+/* Projects */
+#projects {
+  display: flex;
+  flex-direction: column;
+  margin: 0rem auto 5rem;
+  margin-top: 4em;
+}
+
+#projects .btn {
+  align-self: center;
+  margin: 2rem 0;
+}
+
+.project {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(250px, auto);
+  grid-gap: 0.9rem;
+}
+
+/* Project cards */
+.card {
+  padding: 1rem;
+  color: #ffffff;
+  border-radius: 10px;
+  transition: 0.4s ease-in-out;
+  cursor: pointer;
+}
+
+.card a {
+  color: #ffffff;
+  transition: 0.25s ease-in-out;
+  font-size: 1.1rem;
+  margin-right: 0.3rem;
+
+}
+
+.card a:hover {
+  color: var(--primary-color);
+}
+
+.card:hover {
+  box-shadow: inset 0 100px 1000px 10px rgba(0, 0, 0, 0.8);
+}
+
+.card:hover .project-info {
+  opacity: 1;
+}
+
+.card .project-bio p {
+  font-size: 0.83rem;
+}
+
+.card .project-bio h3 {
+  font-size: 0.9rem;
+}
+
+.project-info {
+  display: flex;
+  justify-content: space-between;
+  opacity: 0;
+  position: relative;
+  transition: 0.5s ease-in-out;
+  color: var(--card-text);
+  width: 100%;
+  height: 100%;
+}
+
+.project-bio {
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  top: 160px;
+  left: 10px;
+}
+
+/* Responsiveness */
+
+@media (max-width: 1000px) {
+  .project {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .project {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+/*
+#back-button {
+  left :0;
+}
+
+
+.back--button {
+  margin: 1.5rem 0;
+  justify-content: first baseline;
+  background-color: pink;
+}
+*/

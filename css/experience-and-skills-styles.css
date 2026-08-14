@@ -1,0 +1,141 @@
+body{
+    background-color: var(--bg-primary);            
+}
+
+h1, h2, h3, h4, strong {
+    color: var(--primary-color);
+}
+
+p, span, li{
+    color: var(--secondary-color);
+    font-size: 1em;
+}
+
+
+li{
+    line-height: 1.9em;
+}
+
+#main{
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1em;
+}
+
+.section--page{
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+#wrapper-bio{
+    display: flex;
+    align-items: center;
+    gap: 4em;
+}
+
+#bio, a{
+    font-weight: 300;
+}
+
+#user-name{
+    font-size: 48px;
+    line-height: 1em;
+}
+
+#profile-pic{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+#socials--list{
+    display: flex;
+    justify-content: space-between;
+    column-gap: 1em;
+    flex-wrap: wrap;
+}
+
+#socials--list a{
+    font-weight: 300;
+    color: var(--text-color-two);
+    font-size: 0.9em;
+    transition: 0.3s;
+}
+
+#socials--list a:hover{
+    font-weight: 100;
+    color: var(--link-color);
+    font-size: 0.9em;
+}
+
+#qualifications--list{
+    list-style: none;
+}
+
+.wrapper-techstack-items{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    font-size: 0.9em;
+}
+
+.card--techstack{
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    padding: 0.5em 1em;
+    align-items: center;
+}
+
+.project-link{
+    padding-top: 1em;
+    padding-bottom: 1em;
+    border-top: 1px solid var(--border-color);
+}
+
+.project-link a{
+    color: var(--text-color);
+
+    transition: 0.3s;
+}
+
+.project-link a:hover{
+    color: rgb(30, 190,214);
+}
+
+.card--work-history{
+    border-left: 1px solid var(--border-color);
+    margin-top: 3em;
+    margin-bottom: 3em;
+    padding-left: 2em;
+}
+
+.line-break{
+    background-color: var(--border-color);
+    height: 1px;
+}
+
+
+@media(max-width:600px){
+
+
+    #wrapper--hero{
+        display: flex;
+        align-items: center;
+        gap: 1em;
+    }
+
+    #profile-pic{
+        width: 200px;
+        height: 200px;
+    }
+
+    #wrapper--hero{
+        flex-direction: column;
+    }
+
+    .card--work-history{
+        border-left: none;
+        padding-left: 0;
+    }
+}
