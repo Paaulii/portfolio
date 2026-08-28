@@ -3,10 +3,11 @@
 :root {
   /* Colors */
   --primary-color: #000;
-  --secondary-color:rgb(51 51 51);
+  --secondary-color:rgb(113, 113, 122);
   --bg-primary: #f9fafb;
   --text-color: #222222;
   --text-color-two: #ffffff;
+  --important-text-color: #ff9e0d;
   --link-color:#0da2b8;
   --link-hovered-color:#14e0ff;
   --bg-secondary: #000000;
@@ -25,7 +26,22 @@
   /* Max width */
   --width-small: 600px;
   --width-medium: 1300px;
-  --width-large: 1600px;
+  --width-large: 1700px;
+
+  --special-button:#61c7d6;
+  --special-icons: rgb(22, 145, 175);
+
+  --slide-progress:50%;
+  --slide-progress-transition: all 200ms cubic-bezier(0.82, 0.02, 0.39, 1.01 );
+  --slider-container-width: 100%;
+
+  --gallery-image-width: 405px;
+
+  --text-with-image-width: 200px;
+  --target-aspect-ratio: 16/9;
+
+  --video-with-desc-width: 349px;
+  --video-gallery-text-color: var(--primary-color);
 }
 
 [data-theme="dark"] {
@@ -42,6 +58,9 @@
   --card-text:#f4f4f4;
   --bg-secondary-two: #f4f4f4;
   --shadow: 0 2px 10px rgba(95, 95, 95, 0.2);
+
+  --special-button:#248e9e;
+  --special-icons:#61c7d6;
 }
 
 * {
@@ -142,6 +161,10 @@ h2::selection {
 }
 
 /* Dark mode toggle */
+.theme-switch img {
+  margin-top: -10px;
+}
+
 #switch {
   display: none;
 }
@@ -196,6 +219,10 @@ h2::selection {
   background: var(--secondary-color);
 }
 
+
+#back-button-section a {
+    display: flex;
+}
 
 /* Responsiveness */
 @media (max-width: 768px) {
@@ -283,4 +310,156 @@ a{
 
 a:hover{
     color: var(--link-hovered-color);
+}
+
+/* Gallery */
+
+#image-container {
+    max-width: 100%;
+}
+
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.image-gallery img {
+    width: var(--gallery-image-width);
+    aspect-ratio: 16/9;
+    padding: 0.5rem;
+    border-radius: 20px;
+}
+
+/* Carousel Gallery */
+
+*, *::after, *::before {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.slider-container {
+    place-items: center;
+    align-content: center;
+    padding: 2rem 0;
+}
+
+.slide img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.slider {
+    position: relative;
+    display: grid;
+    place-items: center;
+    max-width: var(--slider-container-width);
+    overflow: hidden;
+    border-radius: 10px;
+
+}
+
+.slide {
+   height: 600px;
+   max-height: 100vh;
+   display: flex;  
+}
+
+.slide img {
+    width: 100%;
+    flex: 1 0 100%;
+}
+
+.slider-progress {
+    position: absolute;
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(90deg, hsla(201, 50%, 90%, 0.2), hsla(201, 93%, 52%, 0.1));
+    bottom: 0;
+    z-index: 4;
+}
+
+.slider-progress::after {
+    content: '';
+    position: absolute;
+    background: linear-gradient(90deg, hsla(201, 50%, 90%, 0.7), hsla(192, 80%, 53%, 0.6));
+    width: var(--slide-progress);
+    height: 6px;
+    left: 0;
+    transition: var(--slide-progress-transition) ;
+}
+
+/* Buttons and animations */
+.slider-btn-container{
+    position: absolute;
+    width: 100%;
+}
+
+.slider-btn {
+    border-radius: 50%;
+    position: absolute;
+    z-index: 2;
+    padding: .2rem;
+    top: 50%;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    background: hsla(201, 50%, 30%, 0.15);
+    color:  hsla(201, 50%, 95%, 0.9);
+    transition: all 200ms ease;
+}
+
+.slider-btn svg {
+    pointer-events: none;
+}
+
+.slider-btn-left {
+    left: 0;
+    transform: translate(50%, -50%);
+}
+
+.slider-btn-left:hover {
+    left: -3px;
+}
+
+.slider-btn-right {
+    right: 0;
+    transform: translate(-50%, -50%);
+}
+
+.slider-btn-right:hover {
+    right: -3px;
+}
+
+.text-with-image {
+  display: flex;
+}
+
+.text-with-image > *:first-child {
+    margin-right: 1rem;
+}
+
+.text-with-image img {
+  width: var(--text-with-image-width);
+  aspect-ratio: var(--target-aspect-ratio);
+  border-radius: 5px;
+}
+
+.text-with-image video {
+  width: var(--text-with-image-width);
+  aspect-ratio: var(--target-aspect-ratio);
+  border-radius: 5px;
+}
+
+/* Paragraph styles */
+
+.important-text {
+  text-decoration: underline !important;
+  font-weight: 700 !important;
+  color : var(--important-text-color) !important;
+
+
 }

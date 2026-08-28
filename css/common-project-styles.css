@@ -1,0 +1,120 @@
+
+/* Categories */
+
+.categories {
+    padding-top: 1%;
+    width:  70%;
+    margin:auto;
+    flex-wrap: wrap;
+}
+
+.btn-category {
+  padding: 0.75rem 1.9rem;
+  margin: 5px 2px;
+  border-radius: 30px;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  font-weight: 600;
+
+  background-color: var(--special-button);
+  color: var(--primary-color);
+}
+
+/* Project Details */
+
+#project-description-container {
+    place-items: center;
+    align-content: center;
+}
+
+#project-overview-container {
+    width: 100%;
+    display: flex;
+}
+
+#project-overview-container > *:first-child {
+    margin-right: 1rem;
+}
+
+#project-overview {
+    flex-basis: 70%;
+}
+
+#project-details {
+    flex-basis: 30%;
+}
+
+.project-description-card {
+    padding: 1.5rem 1.5rem;
+    width: 100%;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.10);
+}
+
+.project-description-card p {
+    color: var(--secondary-color);
+    font-weight: 300;
+    justify-content: center;
+}
+
+.project-description-card  h2 {
+    margin: 0 0 1.5rem;
+    font-weight: 500;
+}
+
+.project-details-row {
+    display: flex;
+    align-items: center;
+    margin: 0.8rem 0;
+}
+
+.project-details-row p {
+    margin-left: 0.5rem;
+    font-weight: 400;
+    font-size: .875rem;
+}
+
+ul {
+    margin-left: 20px;
+}
+
+ul li {
+    font-weight: 300;
+}
+
+li:not(:last-child) { 
+   margin-bottom: 10px;  
+}
+
+/* Video */
+.video-gallery {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px 10px 10px 0;
+  grid-gap:10px;
+}
+
+.video-with-desc {
+    text-align: center;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.10);
+}
+
+.video-with-desc video {
+    margin: 0.5rem 0;
+}
+
+.video-with-desc p{
+    color: var( --video-gallery-text-color);
+    font-size: 1.1em ;
+    padding: 0.25rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.miniature-video {
+    width: var(--video-with-desc-width);
+}

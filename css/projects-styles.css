@@ -145,16 +145,3 @@ body {
     grid-template-columns: 1fr;
   }
 }
-
-/*
-#back-button {
-  left :0;
-}
-
-
-.back--button {
-  margin: 1.5rem 0;
-  justify-content: first baseline;
-  background-color: pink;
-}
-*/
