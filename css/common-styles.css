@@ -27,7 +27,7 @@
   --width-small: 30%;
   --width-medium: 67%;
   --width-large: 88%;
-  --width-full: 100%;
+  --width-extra-large: 98%;
 
   --special-button:#61c7d6;
   --special-icons: rgb(22, 145, 175);
@@ -91,11 +91,6 @@ body{
   }
 }
 
-@media (max-width: 500px) {
-  .container {
-    max-width: var(--width-full);
-  }
-}
 
 h1::selection,
 h2::selection {
