@@ -107,7 +107,7 @@
             <h2>Features</h2>
             <ul>
               <li>Creating and joining session
-                <div class="text-with-image">
+                <div class="text-with-multimedia">
                   <p>The UI System is a World Subsystem responsible for managing the main UI layer and the stacks required to support Common UI and initialization of global View Models.
                     It uses a configurable Data Asset to determine which ViewModels (VMs) should be created for a given level. The subsystem’s lifetime is tied to the level, allowing ViewModels to be created and managed only when they are needed. Any UI can access and bind to the ViewModels it requires.</p>
                       <video class="miniature-video" controls>
@@ -121,13 +121,13 @@
                 <p>The main game loop handles creating and joining session, spawning AI camps in the map, and minecart movement. When the payload reaches the end of the route, the boss fight begins. Boss is spawned, and the UI displays the boss’s health status. After defeating a boss, UI with victory screen is displayed. If players die during the fight, they can retry the level.</p>
               </li>
               <li>Health bars
-                <div class="text-with-image">
+                <div class="text-with-multimedia">
                   <p>In the game, players, AI, resources and minecart have their own health bar status. They are displayed based on priority: Owner Player > Other Player > AI > Minecart > Resources. Later, I plan to display it based on the distance from the player.</p>
                   <a href="/assets/images/project/coop-roguelike/health-bars.png" data-lightbox="healthbar-img" data-title="Health bar widget component on various Actors"><img src="/assets/images/project/coop-roguelike/health-bars.png" alt=""></a>
                 </div>
               </li>
               <li>UI System
-                <div class="text-with-image">
+                <div class="text-with-multimedia">
                   <p>The UI System is a World Subsystem responsible for managing the main UI layer and the stacks required to support Common UI and initialization of global View Models.
                     It uses a configurable Data Asset to determine which ViewModels (VMs) should be created for a given level. The subsystem’s lifetime is tied to the level, allowing ViewModels to be created and managed only when they are needed. Any UI can access and bind to the ViewModels it requires.</p>
                   <a href="/assets/images/project/coop-roguelike/viewmodel-initialization-data-asset.png" data-lightbox="viewmodel-img" data-title="Data Asset with a list of Levels and ViewModels that should be initialized."><img src="/assets/images/project/coop-roguelike/viewmodel-initialization-data-asset.png" alt=""></a>
@@ -140,29 +140,29 @@
                 <p>Simple AI that tries to attack the player, if no players are around then it focuses the minecart, and if no minecart are in a range then it patrols a location.</p>
               </li>
               <li>Boss Fight Sequence
-                <div class="text-with-image">
+                <div class="text-with-multimedia">
                   <p>When the minecart reaches the end of the railroad, boss's spawns. UI with Boss's health is shown and players need to kill the boss in order to complete the level and gain awards.  </p>
                   <a href="/assets/images/project/coop-roguelike/boss-fight.png" data-lightbox="boss-img" data-title="Boss fight"><img src="/assets/images/project/coop-roguelike/boss-fight.png" alt=""></a>
                 </div>
               </li>   
               <li>Abilities
                 <p>Players at the moment can: attack, revive a companion, mine stones, pick up, drop and use item.  </p>
-                <div class="video-gallery">
-                  <div class="video-with-desc">
+                <div class="table-gallery">
+                  <div class="table-gallery-tile">
                     <p>Knocked Out</p>
                       <video class="miniature-video" controls>
                         <source src="/assets/video/projects/coop-roguelike/player-knocked-out.mp4" type="video/mp4">
                           Your browser does not support HTML video.
                       </video>
                   </div>
-                  <div class="video-with-desc">
+                  <div class="table-gallery-tile">
                     <p>Revive</p>
                       <video class="miniature-video" controls>
                         <source src="/assets/video/projects/coop-roguelike/player-revived.mp4" type="video/mp4">
                           Your browser does not support HTML video.
                       </video>
                   </div>
-                  <div class="video-with-desc">
+                  <div class="table-gallery-tile">
                     <p>Mine | Pick up Item | Drop Item</p>
                       <video class="miniature-video" controls>
                         <source src="/assets/video/projects/coop-roguelike/player-mine-crystal.mp4" type="video/mp4">
