@@ -24,9 +24,10 @@
   --weight-bold: 800;
 
   /* Max width */
-  --width-small: 600px;
-  --width-medium: 1300px;
-  --width-large: 1700px;
+  --width-small: 30%;
+  --width-medium: 67%;
+  --width-large: 88%;
+  --width-full: 100%;
 
   --special-button:#61c7d6;
   --special-icons: rgb(22, 145, 175);
@@ -71,7 +72,7 @@
 }
 
 body{
-    background-color: var(--bg-primary);            
+    background-color: var(--bg-primary);      
 }
 
 #main-container {
@@ -82,6 +83,18 @@ body{
   max-width: var(--width-medium);
   margin: 0 auto;
   padding: 1rem 1rem;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    max-width: var(--width-large);
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    max-width: var(--width-full);
+  }
 }
 
 h1::selection,
@@ -228,7 +241,7 @@ h2::selection {
 @media (max-width: 768px) {
 }
 
-@media (max-width: 800px) {
+@media (max-width: 850px) {
   .navbar .nav-menu {
     position: fixed;
     right: -100vw;
@@ -314,25 +327,33 @@ a:hover{
 
 /* Gallery */
 
-#image-container {
-    max-width: 100%;
-}
-
 .image-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(250px, auto);
+  grid-gap: 0.9rem;
 }
 
 .image-gallery video, .image-gallery img {
-  width: var(--gallery-image-width);
-  aspect-ratio: 16/9;
-   padding: 0.5rem;
-  border-radius: 15px;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
   object-fit: cover;
 }
 
 
+@media (max-width: 1000px) {
+  .image-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .image-gallery{
+    grid-template-columns: 1fr;
+  }
+}
 /* Carousel Gallery */
 
 *, *::after, *::before {
@@ -351,7 +372,7 @@ a:hover{
 
 .slide img {
     width: 100%;
-    object-fit: center;
+    object-fit: cover;
 }
 
 .slider {
@@ -361,11 +382,9 @@ a:hover{
     max-width: var(--slider-container-width);
     overflow: hidden;
     border-radius: 10px;
-
 }
 
 .slide {
-   height: 600px;
    max-height: 100vh;
    display: flex;  
 }
@@ -438,7 +457,12 @@ a:hover{
 
 .text-with-multimedia {
   display: flex;
-  width: 100%;
+}
+
+@media (max-width: 950px) {
+  .text-with-multimedia {
+    display: inline;
+  }
 }
 
 .text-with-multimedia > *:first-child {
