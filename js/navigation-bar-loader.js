@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $('#navigation-bar-loader').load("/pages/components/navigation-bar.html", "", function() {
-        $.getScript("/js/navigation-bar.js")
+    $('#navigation-bar-loader').load("/portfolio/pages/components/navigation-bar.html", "", function() {
+        $.getScript("/portfolio/js/navigation-bar.js")
     });
 });

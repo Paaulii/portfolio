@@ -1,3 +1,3 @@
 $(document).ready(function(){
-    $('#footer-loader').load("/pages/components/footer.html", "")
+    $('#footer-loader').load("/portfolio/pages/components/footer.html", "")
 });

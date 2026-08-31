@@ -324,13 +324,14 @@ a:hover{
     align-items: center;
 }
 
-.image-gallery img {
+.image-gallery video, .image-gallery img {
   width: var(--gallery-image-width);
   aspect-ratio: 16/9;
-  padding: 0.5rem;
+   padding: 0.5rem;
   border-radius: 15px;
   object-fit: cover;
 }
+
 
 /* Carousel Gallery */
 
@@ -350,7 +351,7 @@ a:hover{
 
 .slide img {
     width: 100%;
-    object-fit: cover;
+    object-fit: center;
 }
 
 .slider {
