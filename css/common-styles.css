@@ -368,7 +368,6 @@ a:hover{
 
 .slide img {
     width: 100%;
-    object-fit: cover;
 }
 
 .slider {
@@ -386,7 +385,7 @@ a:hover{
 
 @media (min-width: 1000px) {
   .slide {
-    height: 600px;
+    aspect-ratio: var(--target-aspect-ratio);
     display: flex;  
   }
 }
