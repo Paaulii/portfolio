@@ -58,9 +58,10 @@
         <div id="project-overview-container">
           <div id="project-overview" class="project-description-card">
             <h2>Overview</h2>
-            <p>Small giraffe wants to resolve the conflict between the flatness and the roundness of the Earth. <p class="important-text">Can you defeat the final boss and find out the truth?!</p></p>
+            <p class="important-text">Game Jam Theme was : SCALE</p>
+            <p>Small giraffe wants to resolve the conflict between the flatness and the roundness of the Earth. It finds a delicious NECKtarine 🍊, that makes giraffe grow its neck everytime it eats. Giraffe thinks that if its neck will be high enough, it will find out, if Earth is flat or round. The giraffe’s neck keeps growing, lifting it higher and higher towards the sky, where it begins to uncover the truth about Earth — and encounters a sinister Sun determined to keep that Truth hidden.<p class="important-text">Can you defeat the final boss and find out the Truth?</p></p>
             <br>
-            <p class="important-text">Fun fuct:</p>
+            <p class="important-text-secondary">Fun fuct:</p>
             <p>This game was essentially an experiment, we made a small challenge to create this game without having any experience with Godot engine before. Eventually, we managed to make a working game in 48 hours. It was a lot of fun and satisfaction to create something in an unfamilliar engine. ☺️</p>
           </div>
           <div id="project-details" class="project-description-card">
@@ -102,11 +103,37 @@
           </div>
         </div>
 
-      <div id="project-features" class="project-description-card">
-            <h2>Implemented features</h2>
+        <div id="project-features" class="project-description-card">
+            <h2>Features</h2>
+            <ul>
+              <li>Floating objects
+                <div class="text-with-multimedia">
+                  <p>All objects that float from right to left. The giraffe can eat them to gain a small amount of points. Objects with a red outline are too large for the giraffe to eat and will hit the giraffe upon collision.</p> 
+                  <a href="/portfolio/assets/images/project/stretching-the-truth/objects.png" data-lightbox="floating-objects" data-title=""><img src="/portfolio/assets/images/project/stretching-the-truth/objects.png" alt=""></a>
+                </div>
+              </li>
+              <li>Giraffe's neck expansion
+                <p>Every time the giraffe eats an object, its neck grows longer and longer. Each object it eats gives the giraffe points. Once it reaches a certain score, the giraffe grows and becomes able to eat larger objects.</p>
+              </li>
+              <li>Boss fight
+                <div class="text-with-multimedia">
+                  <p>At the end of the game, the giraffe encounters the Sun, which, like the other objects, is initially too large for the giraffe to eat. To defeat the Sun, the giraffe must continue growing. After several growth stages, the giraffe becomes large enough to eat the Sun, bringing the game to an end.</p> 
+                      <video class="miniature-video" controls>
+                        <source src="/portfolio/assets/video/projects/stretching-the-truth/boss-fight.mp4" type="video/mp4">
+                          Your browser does not support HTML video.
+                      </video>
+                </div>
+              </li>
+            </ul>
+        </div>
+
+        <div id="project-contribution" class="project-description-card">
+            <h2>Contribution</h2>
+            <p>During development I was working on: </p>
+            <br>
             <ul>
               <li>Giraffe's movement</li>
-              <li>Giraffe's head expansion</li>
+              <li>Giraffe's neck expansion</li>
               <li>Eating food</li>
               <li>Game state machine</li>
               <li>Cinematics sequence</li>

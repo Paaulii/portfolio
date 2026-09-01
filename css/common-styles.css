@@ -8,6 +8,7 @@
   --text-color: #222222;
   --text-color-two: #ffffff;
   --important-text-color: #ff9e0d;
+  --important-text-secondary-color: #30a05f;
   --link-color:#0da2b8;
   --link-hovered-color:#14e0ff;
   --bg-secondary: #000000;
@@ -374,14 +375,20 @@ a:hover{
     position: relative;
     display: grid;
     place-items: center;
-    max-width: var(--slider-container-width);
+    width: var(--slider-container-width);
     overflow: hidden;
     border-radius: 10px;
 }
 
 .slide {
-   max-height: 100vh;
-   display: flex;  
+  display: flex;  
+}
+
+@media (min-width: 1000px) {
+  .slide {
+    height: 600px;
+    display: flex;  
+  }
 }
 
 .slide img {
@@ -483,4 +490,9 @@ a:hover{
   text-decoration: underline !important;
   font-weight: 700 !important;
   color : var(--important-text-color) !important;
+}
+
+.important-text-secondary {
+  font-weight: 700 !important;
+  color : var(--important-text-secondary-color) !important;
 }
