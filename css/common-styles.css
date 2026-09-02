@@ -330,7 +330,7 @@ a:hover{
   grid-gap: 0.9rem;
 }
 
-.image-gallery video, .image-gallery img {
+.image-gallery video, .image-gallery img, .image-gallery iframe {
   border-radius: 10px;
   overflow: hidden;
   height: 100%;
