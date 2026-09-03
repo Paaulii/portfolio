@@ -93,12 +93,6 @@ body{
 }
 
 
-h1::selection,
-h2::selection {
-  color: #111;
-  background: var(--primary-color);
-}
-
 /* Navbar */
 #initials{
   font-size: 30px;
@@ -268,6 +262,10 @@ h2::selection {
   .nav-menu li {
     margin-bottom: 0.5rem;
     width: 100%;
+  }
+
+  li:not(:last-child) { 
+    margin-bottom: 10px;  
   }
 
   .nav-menu .btn {

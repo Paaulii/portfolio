@@ -107,10 +107,6 @@ ul ul {
     color: var(--secondary-color)
 }
 
-li:not(:last-child) { 
-   margin-bottom: 10px;  
-}
-
 /* Table gallery */
 .table-gallery {
   margin-top: 1rem;
